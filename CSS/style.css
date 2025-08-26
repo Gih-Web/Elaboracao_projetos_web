@@ -1,0 +1,14 @@
+/* estilo do cabeçalho*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+.header{
+background-color: #1F1F1F; /* cor de fundo */
+padding: 10px 20px ;/* tamanho da área (do cabeçalho) */
+align-items: center;/* alinhamento dos itens */
+display: flex; /* Redimensionar*/
+justify-content: space-between;/*colocar os itens lado a lado, colocando os espaços so lado */
+
+}
