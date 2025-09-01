@@ -60,6 +60,11 @@ font-weight: bold; /*fonte em negrito*/
 
 }
 
+/*.icons:hover {
+    background-color: rgb(49, 49, 49);
+}*/
+
+
 .footer{
     background-color: #e7e7e7; /* cor de fundo*/
     padding: 15px 40px 15px 40px; /*dimensão*/
@@ -107,18 +112,19 @@ main{
 
 .carrossel{
     position: relative; /*posição relativa para os botões*/
-   /* width: 80;/* largura do carrossel*/
+    width: 80%; /*largura do carrossel*/
     max-width: 100%;
-    margin: 0px auto; /* margem de 20px de todos os lados*/
-    border-radius: 20px; /* arredondar bordas*/
-    box-shadow: 0px 4px 8px; /*sombra*/
+    margin: 0 auto ; /* margem de 20px de todos os lados*/
+    margin-top: 20px;
+ /* border-radius: 20px; /* arredondar bordas*/
+ /* box-shadow: 0px 4px 8px; /*sombra*/
 
 }
 /*configuração dos slides do banner*/
 .slide-banner{
     display: none; /*esconder os slides inicialmente*/
     width: 100%; /* ocupar toda a largura do carrossel*/
-    border-radius: 20px; /*arredondar bordas*/
+  /*border-radius: 20px; /*arredondar bordas*/
 }
 
 .slide-banner.active{
@@ -128,10 +134,96 @@ main{
 /*configurando as imagens do carrossel*/
 .slide-banner img{
     width: 100%; /* ocupar toda a largura do sliade */
-    border-radius: 20px; /*arredondar bordas*/
+ /* border-radius: 20px; /*arredondar bordas*/
     display: block;
-}
-
-img{
     object-fit: cover;
 }
+
+
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%) ;
+    background-color: rgba(0, 0, 0, 0.10);
+    color: rgb(130, 130, 130);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 35px;
+    border-radius: 50%;
+}
+
+.next{
+    right: 10px; /* Posição à direita*/
+}
+
+.prev{
+    left: 10px;/* Posição à esquerda*/
+}
+
+/* mudar de cor qaundo o mouse passa por cima*/ 
+.prev:hover, .next:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+/* Categorias*/
+
+.categorias{
+
+    text-align: center;/* texto alinhado ao centro  */
+    margin: 40px; /*margem em volta */
+
+}
+
+/* conficurando o texto com nome categoria */
+
+.categorias h2{
+    font-family: Arial, Helvetica, sans-serif;/*tipo de fonte */
+    color: #c18c1b;/**cor da fonte  */
+    font-weight: bold;/*negrito */
+    margin-bottom: 25px; /*margem embaixo do texto */
+    text-align: left;
+    
+
+}
+
+.categorias-container{
+    display: flex;/* deixa os itens flexi*/
+    gap: 40px;/*espaço entre os itens */
+    justify-content: center; /**centraliza os itens */
+    flex-wrap: wrap;/** faz com que os itens que não couberem na tela, pulem para a proxima linha  */
+
+}
+
+.lista-categorias{
+    width: 150px; /*largura da categoria */
+    height: 150px;/*altura da gategoria */
+   /* background-color: #0d47a1; /*corde fundo */
+    border-radius: 50%; /**deixa as categoria arredondada, quem quiser em circulo deixa o valor em px*/
+    display: flex; /**flexível */
+    align-items: center; /**centraliza na vertical */
+    justify-content: center; /**centraliza os itens horizontal */
+    overflow: hidden;/** esconde o que sair da área da categoria */
+    cursor: pointer;
+
+}
+
+.lista-categorias img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/*para texto 
+
+/*.lista-categorias img{
+   color: white; cor do texto
+   font-familly:arial
+   text-alight: center
+   padding: 10px
+
+*/
+
+
+
